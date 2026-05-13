@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA Minimization Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>DFA Minimization Tool</h1>
+
+        <div class="grid">
+
+            <div>
+                <label>States</label>
+                <input
+                    type="text"
+                    id="states"
+                    placeholder="Example: q0,q1,q2,q3"
+                >
+            </div>
+
+            <div>
+                <label>Alphabet</label>
+                <input
+                    type="text"
+                    id="alphabet"
+                    placeholder="Example: 0,1"
+                >
+            </div>
+
+            <div>
+                <label>Start State</label>
+                <input
+                    type="text"
+                    id="startState"
+                    placeholder="Example: q0"
+                >
+            </div>
+
+            <div>
+                <label>Final States</label>
+                <input
+                    type="text"
+                    id="finalStates"
+                    placeholder="Example: q2,q3"
+                >
+            </div>
+
+        </div>
+
+        <div class="transition-box">
+
+            <label>Transitions (from,input,to)</label>
+
+            <textarea
+                id="transitions"
+                rows="10"
+                placeholder="Example:
+q0,0,q1
+q0,1,q2
+q1,0,q0
+q1,1,q3"
+            ></textarea>
+
+        </div>
+
+        <button onclick="minimizeDFA()">
+            Minimize DFA
+        </button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
